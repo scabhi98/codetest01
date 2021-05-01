@@ -15,61 +15,63 @@
 </head>
 <body>
 <section class="sr-container">
-    <nav class="cs-layout-row cs-space-between-start">
-        <div class="cs-flex-shrink">
+    <nav class="cs-layout-row cs-space-between-start" >
+        <a href="/" class="cs-flex-shrink" style="z-index: 50;">
             <img src="../assets/images/asset (69).png" alt="placeholder">
-        </div>
+        </a>
         <span class="swiper-pagination cs-flex cs-pos-rel"></span>
         <div class="cs-flex-shrink">
-<!--            <div class="onoffswitch">-->
-<!--                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="languageSwitch2" tabindex="0">-->
-<!--                <label class="onoffswitch-label" for="languageSwitch2">-->
-<!--                    <span class="onoffswitch-inner"></span>-->
-<!--                    <span class="onoffswitch-switch"></span>-->
-<!--                </label>-->
-<!--            </div>-->
+            <div class="onoffswitch" style="z-index: 50">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" onchange="langToggleAction()" id="languageSwitch2" tabindex="0">
+                <label class="onoffswitch-label" for="languageSwitch2">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
 
                 </div>
     </nav>
-    <div class="sr-content sr-float-start cs-layout-row cs-start-start cs-padding-0-2">
-        <div class="onoffswitch cs-self-align-end">
-            <input type="checkbox" name="langSwitch" onchange="langToggleAction()" class="onoffswitch-checkbox" id="languageSwitch2" tabindex="0">
-            <label class="onoffswitch-label" for="languageSwitch2">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-            </label>
-        </div>
-        <div class="cs-flex cs-layout-column cs-start-center cs-pos-abs sr-nav-hanger" style="height: 75%;">
-            <div class="sr-float-start cs-layout-row cs-center-stretch"  style="height: 90%; width: 100%; z-index: -1">
+    <div class="sr-content cs-layout-row cs-space-around-start cs-padding-0-2">
+<!--        <div class="onoffswitch cs-self-align-end">-->
+<!--            <input type="checkbox" name="langSwitch" onchange="langToggleAction()" class="onoffswitch-checkbox" id="languageSwitch2" tabindex="0">-->
+<!--            <label class="onoffswitch-label" for="languageSwitch2">-->
+<!--                <span class="onoffswitch-inner"></span>-->
+<!--                <span class="onoffswitch-switch"></span>-->
+<!--            </label>-->
+<!--        </div>-->
+        <div class="cs-flex cs-layout-column cs-space-around-center sr-nav-hanger" style="height: 90%;">
+            <div class="cs-layout-row cs-pos-abs cs-center-stretch"  style="height: 85%; width: 100%; z-index: -1; top: 0;">
                 <div class="sr-white-bar"></div>
             </div>
-            <div style="height: 20%"></div>
+<!--            <div style="height: 20%"></div>-->
             <div class="cs-full-circle cs-perfect-center sr-bullet-number">
                 <div class="cs-full-circle cs-perfect-center" onclick="location.assign('templates/why.html')" >
                     1
                 </div>
             </div>
-            <div style="height: 20%"></div>
+<!--            <div style="height: 20%"></div>-->
             <div class="cs-full-circle cs-perfect-center sr-bullet-number">
                 <div class="cs-full-circle cs-perfect-center" onclick="location.assign('templates/why.html')" >
                     2
                 </div>
             </div>
-            <div style="height: 20%"></div>
+<!--            <div style="height: 20%"></div>-->
             <div class="cs-full-circle cs-perfect-center sr-bullet-number">
                 <div class="cs-full-circle cs-perfect-center" onclick="location.assign('templates/why.html')" >
                     3
                 </div>
             </div>
-            <div style="height: 20%"></div>
+<!--            <div style="height: 20%"></div>-->
             <div class="cs-full-circle cs-perfect-center sr-bullet-number">
                 <div class="cs-full-circle cs-perfect-center" onclick="location.assign('templates/why.html')" >
                     4
                 </div>
             </div>
             <!--                    <img class="sr-nav-tiles" src="../assets/images/placeholder.jpg" alt="placeholder">-->
-            <div style="height: 40%"></div>
-            <img class="sr-nav-tiles" src="../assets/images/placeholder.jpg" alt="placeholder">
+<!--            <div style="height: 20%"></div>-->
+            <div class="cs-flex sr-nav-tiles cs-perfect-center" >
+                <span id="page-subtitle"></span>
+            </div>
         </div>
         <div class="cs-flex cs-layout-row cs-flex-60 cs-center-center cs-self-align-center" style="height: 55%; margin: auto">
             <div class=" sr-swiper-container cs-layout-column cs-perfect-center cs-pos-rel">
@@ -118,46 +120,62 @@
     ];
     var languages = {
         hindi: {
-            'hurt' : 'जब हमने किसी को दुःख पहोंचाया हो !',
-            'injured' : 'जब हमारे कारण किसी को चोट लगे !',
-            'break' : 'जब हमसे अचानक कोई चीज़ तूट जाए !',
-            'lose' : 'जब हमसे कोई चीज़ गुम हो जाए !',
-            'mistake' : 'जब कोई गलती करतें हैं !',
-            'not-talking' : 'जब कोई हमसे बात नहीं करता !',
-            'angry' : 'जब हमारे माँ - बाप - भाई - बहन हमसे गुस्सा हैं !',
-            'lie' : 'जब हम झूठ बोलते है !',
-            'talk-rudely' : 'जब हम चिल्लाते हैं या किसी से बदतमीजी से बात करते हैं !',
-            'not-allowed' : 'जब हम ऐसा कार्य करते हैं जो हमें नहीं करना चाहिए !'
+            slides : {
+                'hurt' : 'जब हमने किसी को दुःख पहोंचाया हो !',
+                'injured' : 'जब हमारे कारण किसी को चोट लगे !',
+                'break' : 'जब हमसे अचानक कोई चीज़ तूट जाए !',
+                'lose' : 'जब हमसे कोई चीज़ गुम हो जाए !',
+                'mistake' : 'जब कोई गलती करतें हैं !',
+                'not-talking' : 'जब कोई हमसे बात नहीं करता !',
+                'angry' : 'जब हमारे माँ - बाप - भाई - बहन हमसे गुस्सा हैं !',
+                'lie' : 'जब हम झूठ बोलते है !',
+                'talk-rudely' : 'जब हम चिल्लाते हैं या किसी से बदतमीजी से बात करते हैं !',
+                'not-allowed' : 'जब हम ऐसा कार्य करते हैं जो हमें नहीं करना चाहिए !',
+            },
+
+            other : {
+                'page-subtitle': 'हमें माफी कब मांगनी चाहिए !'
+            }
         },
         english: {
-            'hurt' : 'When someone is hurt because of us',
-            'injured' : 'When someone gets injured because of us',
-            'break' : 'When we break something accidently',
-            'lose' : 'When we lose something',
-            'mistake' : 'When we make mistake',
-            'not-talking' : 'When someone is not talking to us',
-            'angry' : 'When our parents/siblings are angry with us',
-            'lie' : 'When we lie',
-            'talk-rudely' : 'When we yell or talk rudely with someone',
-            'not-allowed' : 'When we do something we are not allowed'
+           slides: {
+               'hurt' : 'When someone is hurt because of us',
+               'injured' : 'When someone gets injured because of us',
+               'break' : 'When we break something accidently',
+               'lose' : 'When we lose something',
+               'mistake' : 'When we make mistake',
+               'not-talking' : 'When someone is not talking to us',
+               'angry' : 'When our parents/siblings are angry with us',
+               'lie' : 'When we lie',
+               'talk-rudely' : 'When we yell or talk rudely with someone',
+               'not-allowed' : 'When we do something we are not allowed',
+           },
+            other: {
+                'page-subtitle': 'When should we say Sorry?'
+            }
         }
     };
 
     function langToggleAction() {
         english = !english;
+        // loadSlides();
+        loadLanguage(selectedLanguage());
+        swiper.update();
+    }
+    function selectedLanguage(){
         console.log(english);
         if(english)
-            loadLanguage(languages.english);
+            return(languages.english);
         else
-            loadLanguage(languages.hindi);
+            return (languages.hindi);
     }
     document.onreadystatechange = () => {
         if(document.readyState === 'complete' ) {
             loadSlides();
             loadLanguage(languages.english);
-            const swiper = new Swiper('.swiper-container' , {
+            swiper = new Swiper('.swiper-container' , {
                 direction: 'horizontal',
-                loop: true,
+                loop: false,
 
                 pagination: {
                     el: '.swiper-pagination',
@@ -169,8 +187,10 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
+
         }
     };
+    var swiper = null;
     function loadSlides() {
         let container = document.querySelector('.swiper-wrapper');
         container.innerHTML = '';
@@ -178,20 +198,29 @@
         console.log(container);
         console.log(template);
         slides.forEach((slide, index) => {
+            let languages = selectedLanguage().slides;
             container.append(
                 templateGenerator(template, {
                     title: slide.title,
-                    image: '../assets/images/' + slide.image
+                    image: '../assets/images/' + slide.image,
+                    caption: languages[slide.title]
                 })
             );
             console.log(container);
-        })
+        });
+        swiper && swiper.destroy();
+
+
     }
     function loadLanguage(lang) {
         console.log(lang);
-        for(let text of Object.getOwnPropertyNames(lang)){
+        for(let text of Object.getOwnPropertyNames(lang.other)){
             console.log(text);
-            document.querySelector('#'+text).innerHTML = lang[text];
+            document.querySelector('#'+text).innerHTML = lang.other[text];
+        }
+        for(let text of Object.getOwnPropertyNames(lang.slides)){
+            console.log(text);
+            document.querySelector('#'+text).innerHTML = lang.slides[text];
         }
     }
 </script>

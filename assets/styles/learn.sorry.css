@@ -12,11 +12,17 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
     background: #BAF20C;
+}
+a {
+    text-decoration: none;
 }
 nav img {
     width: 50px;
     height: 50px;
+    margin: 1em;
 }
 .sr-title {
     font-family: ChaparralPro-Bold;
@@ -31,13 +37,28 @@ nav img {
     top: 0;
     left: 0;
 }
-img.sr-nav-tiles {
-    width: 120px;
-    height: 120px;
+.sr-nav-tiles {
+    width: 15vw;
+    height: 15vw;
+}
+.sr-nav-tiles {
+    background-image: url("../images/asset (68).png");
+    background-size: cover;
+}
+.sr-nav-tiles > span {
+    font-family: ChaparralPro-Bold;
+    font-size: 2em;
+    width: 65%;
+    margin: auto;
+    color: #f95006;
+}
+.sr-nav-tiles.sr-center-content {
+    width: 30vw;
+    height: 30vw;
 }
 .sr-content {
-    width: 100vw;
-    height: 100vh;
+    width: 90vw;
+    height: 90vh;
 }
 img.sr-center-content {
     width: 100%;
@@ -48,7 +69,7 @@ div.sr-white-bar {
     width: 4px;
 }
 .sr-nav-hanger {
-    margin: 0 15px;
+    margin: 0 auto;
 }
 .sr-bullet-number {
     background-color: #F95006;
@@ -95,7 +116,10 @@ div.sr-white-bar {
     max-width: 60%;
     font-family: Baloo;
     color: #5F2F00;
-}
+}.sr-center-content > img {
+    width: 70%;
+    margin: auto;
+ }
 
 /* Copied Code for Toggle Switch */
 .onoffswitch {
